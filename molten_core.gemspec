@@ -1,20 +1,20 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require 'core_extensions/version'
+require 'molten_core/version'
 
 Gem::Specification.new do |s|
   s.rubygems_version      = '1.3.5'
 
-  s.name                  = 'core_extensions'
-  s.rubyforge_project     = 'core_extensions'
+  s.name                  = 'molten_core'
+  s.rubyforge_project     = 'molten_core'
 
-  s.version               = CoreExtensions::VERSION
+  s.version               = MoltenCore::VERSION
   s.platform              = Gem::Platform::RUBY
 
   s.authors               = %w{jfelchner m5rk}
   s.email                 = 'support@chirrpy.com'
   s.date                  = Date.today
-  s.homepage              = 'https://github.com/chirrpy/core_extensions'
+  s.homepage              = 'https://github.com/chirrpy/molten_core'
 
   s.summary               = %q{Easy Accessors for ActiveModel Objects}
   s.description           = %q{}
