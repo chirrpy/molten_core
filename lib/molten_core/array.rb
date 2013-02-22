@@ -23,11 +23,11 @@ class Array
     end
   end
 
-  def with_extractable_options!
-    options = self.extract_options!
-
-    yield self, options
-
-    self << options unless options.empty?
+  def extract_options
+    if last.is_a?(Hash) && last.extractable_options?
+      last
+    else
+      {}
+    end
   end
 end
