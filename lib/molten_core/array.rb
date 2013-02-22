@@ -1,3 +1,5 @@
+require 'active_support/core_ext/array/extract_options'
+
 class Array
   def delete!(default = nil, &block)
     index_of_item = self.index(&block)
@@ -22,10 +24,10 @@ class Array
   end
 
   def with_extractable_options!
-    options            = args.extract_options!
+    options = self.extract_options!
 
     yield args, options
 
-    args << options unless options.empty?
+    self << options unless options.empty?
   end
 end
