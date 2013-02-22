@@ -20,4 +20,12 @@ class Array
       end
     end
   end
+
+  def with_extractable_options!
+    options            = args.extract_options!
+
+    yield args, options
+
+    args << options unless options.empty?
+  end
 end
