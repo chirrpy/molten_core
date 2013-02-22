@@ -26,7 +26,7 @@ class Array
   def with_extractable_options!
     options = self.extract_options!
 
-    yield args, options
+    yield self, options
 
     self << options unless options.empty?
   end
